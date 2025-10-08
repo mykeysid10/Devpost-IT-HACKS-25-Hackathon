@@ -8,7 +8,7 @@ A multi-agent AI system designed specifically for telecom customer support that 
 
 ---
 
-## Hosted APP URL
+### Hosted APP
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://devpost-it-hacks-25-hackathon.streamlit.app/)
 
@@ -20,12 +20,11 @@ A multi-agent AI system designed specifically for telecom customer support that 
 
 ---
 
-### Agent Workflow:
-1. **🎙️ Transcription Agent** - Converts speech to text using Whisper with 95%+ accuracy
-2. **😊 Sentiment Analysis Agent** - Analyzes emotional tone and customer satisfaction level  
-3. **🔍 Information Extraction Agent** - Identifies key topics, issues, and customer intent
-4. **📚 Context Retrieval Agent** - Finds similar past solutions using semantic search
-5. **💬 Response Generation Agent** - Creates empathetic, context-aware responses
+### Agentic Workflow:
+1. **🎙️ Transcription Agent** - Converts speech to text using Whisper with 95%+ accuracy.
+2. **🔍 Information Extracton & Sentiment Analysis Agent** - Identifies key topics, issues, customer intent & analyzes emotional tone and customer satisfaction level.
+3. **📚 Context Retrieval Agent** - Finds similar past solutions using semantic search.
+4. **💬 Response Generation Agent** - Creates empathetic, context-aware responses.
 
 ---
 
