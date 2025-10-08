@@ -4,7 +4,14 @@ import os
 import shutil
 from dotenv import load_dotenv
 
-load_dotenv()
+# Load environment variables - with Streamlit secrets fallback
+def get_env_var(key, default=None):
+    """Get environment variable from Streamlit secrets or os.environ"""
+    try:
+        import streamlit as st
+        return st.secrets[key]
+    except:
+        return os.getenv(key, default)
 
 def get_next_id():
     """Get the next ID by finding the maximum existing ID and adding 1"""
@@ -24,7 +31,8 @@ def get_next_id():
 
 def get_or_create_collection():
     """Get existing collection or create a new one - single persistent collection"""
-    client = chromadb.PersistentClient(path=os.getenv('CHROMA_DB_PATH'))
+    chroma_db_path = get_env_var('CHROMA_DB_PATH', './chroma_db')
+    client = chromadb.PersistentClient(path=chroma_db_path)
     
     try:
         collection = client.get_collection("customer_service_kb")
@@ -154,7 +162,7 @@ def is_chroma_empty():
 
 def cleanup_old_chroma_data():
     """Clean up old ChromaDB data to prevent accumulation - now uses single collection"""
-    chroma_path = os.getenv('CHROMA_DB_PATH')
+    chroma_path = get_env_var('CHROMA_DB_PATH', './chroma_db')
     if os.path.exists(chroma_path):
         for item in os.listdir(chroma_path):
             item_path = os.path.join(chroma_path, item)
@@ -181,7 +189,7 @@ def get_all_records():
 
 if __name__ == "__main__":
     # Define your CSV file path
-    CSV_FILE_PATH = "data/customer_service_data.csv"
+    CSV_FILE_PATH = get_env_var('CSV_DATA_PATH', 'data/customer_service_data.csv')
     
     # Initialize the collection
     collection = get_or_create_collection()
