@@ -72,3 +72,11 @@ A multi-agent AI system designed specifically for telecom customer support that 
 - Python 3.8+
 - Groq API Key
 - Streamlit Account (for deployment)
+
+---
+
+### 🎬 Videos
+
+[About Usecase](https://github.com/user-attachments/assets/8c2f92af-5bcb-4e15-a9e8-43a64da2213b)
+
+[Demo UI](https://github.com/user-attachments/assets/ff492c17-bf71-4a18-ad1b-5c96e5b662d3)
