@@ -2,13 +2,21 @@
 
 ---
 
-### 📌 Overview
+### Overview
 
 A multi-agent AI system designed specifically for telecom customer support that processes customer audio queries through sequential AI agents to provide intelligent, context-aware solutions. Implements a sophisticated agent workflow with human-in-the-loop validation.
 
 ---
 
-## 🌟 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://devpost-it-hacks-25-hackathon.streamlit.app/)
+## Hosted APP URL
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://devpost-it-hacks-25-hackathon.streamlit.app/)
+
+---
+
+### System Architecture
+
+![System Architecture](system_architecture.png)
 
 ---
 
@@ -21,7 +29,7 @@ A multi-agent AI system designed specifically for telecom customer support that 
 
 ---
 
-### 🛠️ Technical Stack
+### Technical Stack
 | Component | Technology Used |
 |-----------|-----------------|
 | **Speech-to-Text** | Groq Cloud + Whisper Large-v3 |
@@ -33,14 +41,14 @@ A multi-agent AI system designed specifically for telecom customer support that 
 
 ---
 
-### 🎯 Domain-Specific Intelligence
+### Domain-Specific Intelligence
 - **Telecom-focused** - Specialized for mobile plans, internet services, billing issues, network problems
 - **Sentiment-aware responses** - Tailored communication based on customer emotion
 - **Contextual understanding** - Leverages past cases for proven solutions
 
 ---
 
-### 👥 Dual User Roles
+### Dual User Roles
 - **👤 Customer** - Submit audio queries and receive AI-generated solutions
 - **👨‍💼 Support Engineer** - Review, edit, and approve AI responses before knowledge base integration
 
