@@ -72,9 +72,3 @@ A multi-agent AI system designed specifically for telecom customer support that 
 - Python 3.8+
 - Groq API Key
 - Streamlit Account (for deployment)
-
----
-
-## 🎬 Demo
-
-[https://github.com/mykeysid10/Bits-CAI-G71-A2/blob/main/Hosted_Demo_Recording.mp4](https://github.com/user-attachments/assets/318c41d7-6208-424b-a6cb-167a83a94750)
