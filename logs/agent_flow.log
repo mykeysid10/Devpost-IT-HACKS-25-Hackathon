@@ -1,0 +1,23 @@
+2025-10-08 17:57:38,638 - INFO - Successfully connected to ChromaDB collection
+2025-10-08 17:58:21,567 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2025-10-08 17:58:21,569 - INFO - ===== Transcription Agent =====
+Transcript:  Do you have 5G coverage in downtime area? Because my phone is not connecting to the network properly.
+
+2025-10-08 17:58:21,738 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-08 17:58:21,758 - INFO - ===== Info Extractor Agent =====
+Extracted Info: {
+  "topic_name": "Network Coverage and Connectivity",
+  "description": "Customer is experiencing network connectivity issues in a specific area and wants to know if 5G coverage is available.",
+  "overall_sentiment": "negative"
+}
+
+2025-10-08 17:58:23,313 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-08 17:58:23,314 - INFO - ===== Context Retrieval Agent =====
+I understand your concern about the 5G coverage in your area. I'd be happy to help you with that. Our 5G network is currently focused in urban and suburban areas, but we're expanding to rural locations throughout this year. Here are some key points about our coverage:
+
+* We have strong 4G LTE coverage in most rural areas with speeds up to 100Mbps.
+* We expect 5G to reach most rural areas by the end of next quarter.
+* You can check our coverage map for specific locations to see the latest information.
+
+If you'd like, I can also check the coverage for your specific location and provide you with more detailed information. To do so, please email your location details to support@gmail.com, and I'll be happy to assist you further.
+
