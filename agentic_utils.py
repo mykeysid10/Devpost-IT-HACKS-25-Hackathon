@@ -11,11 +11,17 @@ from datetime import datetime
 from dotenv import load_dotenv
 from chroma_db_utils import get_or_create_collection
 
-# Load environment variables
-load_dotenv()
+# Load environment variables - with Streamlit secrets fallback
+def get_env_var(key, default=None):
+    """Get environment variable from Streamlit secrets or os.environ"""
+    try:
+        import streamlit as st
+        return st.secrets[key]
+    except:
+        return os.getenv(key, default)
 
 # Setup logging - single log file per session
-log_dir = os.getenv('LOG_DIR', 'logs')
+log_dir = get_env_var('LOG_DIR', 'logs')
 os.makedirs(log_dir, exist_ok=True)
 log_filename = f"{log_dir}/agent_flow.log"
 
@@ -33,7 +39,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Initialize clients
-groq_client = Groq(api_key=os.getenv('GROQ_API_KEY'))
+groq_api_key = get_env_var('GROQ_API_KEY')
+if not groq_api_key:
+    raise ValueError("GROQ_API_KEY not found in environment variables or Streamlit secrets")
+
+groq_client = Groq(api_key=groq_api_key)
 
 # Initialize ChromaDB collection
 try:
@@ -41,9 +51,11 @@ try:
     logger.info("Successfully connected to ChromaDB collection")
 except Exception as e:
     logger.error(f"Error connecting to ChromaDB: {e}")
-    chroma_client = chromadb.PersistentClient(path=os.getenv('CHROMA_DB_PATH'))
+    chroma_db_path = get_env_var('CHROMA_DB_PATH', './chroma_db')
+    chroma_client = chromadb.PersistentClient(path=chroma_db_path)
     collection = chroma_client.create_collection("customer_service_kb")
 
+# Rest of your existing code remains the same...
 class AgentState(TypedDict):
     audio_file: str
     transcript: str
