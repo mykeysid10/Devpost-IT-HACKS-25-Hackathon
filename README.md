@@ -6,7 +6,11 @@
 
 A multi-agent AI system designed specifically for telecom customer support that processes customer audio queries through sequential AI agents to provide intelligent, context-aware solutions. Implements a sophisticated agent workflow with human-in-the-loop validation.
 
+---
+
 ## 🌟 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://devpost-it-hacks-25-hackathon.streamlit.app/)
+
+---
 
 ### Agent Workflow:
 1. **🎙️ Transcription Agent** - Converts speech to text using Whisper with 95%+ accuracy
@@ -15,8 +19,9 @@ A multi-agent AI system designed specifically for telecom customer support that 
 4. **📚 Context Retrieval Agent** - Finds similar past solutions using semantic search
 5. **💬 Response Generation Agent** - Creates empathetic, context-aware responses
 
-### 🛠️ Technical Stack
+---
 
+### 🛠️ Technical Stack
 | Component | Technology Used |
 |-----------|-----------------|
 | **Speech-to-Text** | Groq Cloud + Whisper Large-v3 |
@@ -26,31 +31,27 @@ A multi-agent AI system designed specifically for telecom customer support that 
 | **Frontend Framework** | Streamlit |
 | **Backend** | Python 3.8+ |
 
+---
+
 ### 🎯 Domain-Specific Intelligence
 - **Telecom-focused** - Specialized for mobile plans, internet services, billing issues, network problems
 - **Sentiment-aware responses** - Tailored communication based on customer emotion
 - **Contextual understanding** - Leverages past cases for proven solutions
 
-### 🛡️ Safety & Guardrails
-- **Domain validation** - Automatically filters non-telecom queries
-- **Harmful content detection** - Blocks inappropriate requests
-- **Credential protection** - Prevents password/security information sharing
-- **Fallback mechanisms** - Uses general knowledge when context is unavailable
-
-### 🔧 Business Rules
-- **Professional communication** - No technical jargon, business-friendly responses
-- **Direct instructions** - Eliminates "can you" phrasing
-- **Email escalation** - Directs complex cases to support@gmail.com
-- **Concise responses** - 4-5 sentence optimized answers
+---
 
 ### 👥 Dual User Roles
 - **👤 Customer** - Submit audio queries and receive AI-generated solutions
 - **👨‍💼 Support Engineer** - Review, edit, and approve AI responses before knowledge base integration
 
+---
+
 ### Data Sources:
 - **ChromaDB Vector Store** - Semantic search across past cases
 - **Human-approved solutions** - Quality-controlled responses
 - **Continuous learning** - Improves with every interaction
+
+---
 
 ### Features:
 - **Real-time indexing** - Instant knowledge base updates
@@ -58,10 +59,14 @@ A multi-agent AI system designed specifically for telecom customer support that 
 - **Case management** - Track pending and approved cases
 - **Quality assurance** - Human validation before deployment
 
+---
+
 ### Prerequisites
 - Python 3.8+
 - Groq API Key
 - Streamlit Account (for deployment)
+
+---
 
 ## 🎬 Demo
 
